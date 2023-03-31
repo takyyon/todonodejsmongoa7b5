@@ -55,6 +55,7 @@ jobs:
           AZURE_LOCATION: ${{ secrets.AZURE_LOCATION }}
           AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           AZURE_RESOURCEGROUPNAME: ${{ secrets.AZURE_RESOURCEGROUPNAME }}
+          AZURE_TAGS: ${{ vars.AZURE_TAGS }}
 
       - name: Azure Dev Deploy
         run: azd deploy --no-prompt
