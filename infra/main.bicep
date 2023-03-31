@@ -35,7 +35,7 @@ param principalId string = ''
 var abbrs = loadJsonContent('./abbreviations.json')
 var resourceToken = toLower(uniqueString(subscription().id, environmentName, location))
 var tags = { 'azd-env-name': environmentName }
-var parsedJsonTags = empty(json(azureTags)) ? {} : json(azureTags);
+var parsedJsonTags = empty(json(azureTags)) ? {} : json(azureTags)
 var rgTags = union(parsedJsonTags, tags)
 
 // Organize resources in a resource group
